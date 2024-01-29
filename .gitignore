@@ -1,0 +1,29 @@
+# Ignore compiled beam files
+*.beam
+
+# Ignore compiled Elixir files
+*.exs~
+*.ex~
+
+# Ignore compiled Erlang files
+*.erl~
+*.hrl~
+
+# Ignore dependencies directory
+/deps
+
+# Ignore build artifacts
+/_build
+
+# Ignore generated documentation
+/doc
+
+# Ignore logs
+/log
+
+# Ignore compiled artifacts
+/ebin
+
+# Ignore editor-specific files
+/.idea
+/.vscode
