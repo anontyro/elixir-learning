@@ -13,4 +13,7 @@
 
 defmodule CountingCharacters do
 
+  def start() do
+    IO.puts("Counting characters")
+  end
 end
