@@ -11,6 +11,13 @@
 # - output is single string
 
 defmodule CountingCharacters do
+  @moduledoc """
+  This module provides functions to analyze a string.
+  """
+
+  @doc """
+  Starts the string analysis process.
+  """
   def start() do
     IO.puts("------ Counting characters ------")
     user_value = IO.gets("What is the input string?\n") |> String.trim()
@@ -25,6 +32,9 @@ defmodule CountingCharacters do
     |> Kernel.-(1)
   end
 
+  @doc """
+  Analyzes a string and prints the results.
+  """
   def string_analyizer(str) do
     if(String.length(str) == 0) do
       user_value =

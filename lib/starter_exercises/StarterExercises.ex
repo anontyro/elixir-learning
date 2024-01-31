@@ -1,9 +1,22 @@
 defmodule StarterExercises.Application do
   use Application
 
+  @input_message """
+  Which application would you like to run:
+  1. Hello World
+  2. Counting Characters
+  3. Printing Quotes
+  4. Mad Libs
+  0. Quit
+
+  """
   def user_application() do
     IO.puts("-----------------------------------")
-    user_value = IO.gets("Which application would you like to run \n 1. Hello World \n 2. Counting Characters \n 0. Quit \n") |> String.trim() |> String.to_integer()
+
+    user_value =
+      IO.gets(@input_message)
+      |> String.trim()
+      |> String.to_integer()
 
     if(user_value == 0) do
       user_application(-1)
@@ -12,16 +25,25 @@ defmodule StarterExercises.Application do
     end
   end
 
-  def user_application(n) when n != -1 and n <=2 do
-    if(n == 1) do
-      HelloWorld.start()
-    else
-      CountingCharacters.start()
+  def user_application(n) when n != -1 and n <= 4 do
+    cond do
+      n == 1 ->
+        HelloWorld.start()
+
+      n == 2 ->
+        CountingCharacters.start()
+
+      n == 3 ->
+        PrindingQutoes.start()
+
+      n == 4 ->
+        MadLibs.start()
     end
+
     user_application()
   end
 
-  def user_application(-1) do
+  def user_application(n) when n < 0 or n > 4 do
     IO.puts("Goodbye!")
   end
 
