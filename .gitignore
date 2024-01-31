@@ -1,29 +1,28 @@
-# Ignore compiled beam files
-*.beam
+# The directory Mix will write compiled artifacts to.
+_build
 
-# Ignore compiled Elixir files
-*.exs~
-*.ex~
+# If you run "mix test --cover", coverage assets end up here.
+cover
 
-# Ignore compiled Erlang files
-*.erl~
-*.hrl~
+# The directory Mix downloads your dependencies sources to.
+deps
 
-# Ignore dependencies directory
-/deps
+# Where third-party dependencies like ExDoc output generated docs.
+/doc/
 
-# Ignore build artifacts
-/_build
+# Ignore .fetch files in case you like to edit your project deps locally.
+/.fetch
 
-# Ignore generated documentation
-/doc
+# If the VM crashes, it generates a dump, let's ignore it too.
+erl_crash.dump
 
-# Ignore logs
-/log
+# Also ignore archive artifacts (built via "mix archive.build").
+*.ez
 
-# Ignore compiled artifacts
-/ebin
+# Ignore package tarball (built via "mix hex.build").
+starter_exercises-*.tar
 
-# Ignore editor-specific files
-/.idea
-/.vscode
+# Temporary files, for example, from tests.
+/tmp/
+
+.elixir_ls
