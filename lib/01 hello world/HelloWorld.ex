@@ -42,10 +42,6 @@ defmodule HelloWorld do
     "good morning"
   ]
 
-  def user_message(userInput) do
-    "test"
-  end
-
   def start() do
     rand_greeting = Enum.random(@greetings)
     rand_msg = Enum.random(@welcome_message)
